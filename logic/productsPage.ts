@@ -4,13 +4,7 @@ import { Locator , Page } from "playwright";
 
 export class ProductsPage extends BasePage {
     
-    private filterOption :Locator
-    constructor(page : Page){
-        this.filterOption.locator();
-
-    }
-
-
+    private filterOption : Locator
 
 
 }

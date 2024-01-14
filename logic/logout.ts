@@ -10,7 +10,7 @@ export class Logout extends BasePage {
     constructor(page : Page){
 
         super(page)
-        this.profileLogo=page.locator('//*[@id="app-root"]/div[2]/header/div/div[2]/div[1]/div[1]/div/div/div/button')
+        this.profileLogo=page.locator('[data-test-id="qa-header-profile-button"]')
         this.logoutButoon=page.getByText('Log Out')
         this.initPage()
 

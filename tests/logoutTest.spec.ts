@@ -1,32 +1,25 @@
 import { BrowserWrapper } from "../infra/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
 import { Logout } from "../logic/logout";
-import configJson from "../config.json"
-import { LoginPage } from "../logic/login-page";
-import { Header } from "../logic/header";
+import { launchBrowserAndMakeLogin } from '../fixture/fixture';
+
 
 let page: Page;
 
 test.describe('test for logout', () => {
-    let browserWrapper: BrowserWrapper;
+    let browser: BrowserWrapper;
+    let page: Page;
     test.beforeEach(async () => {
-        browserWrapper = new BrowserWrapper;
-        page = await browserWrapper.getPage(configJson.url)
-       // browserWrapper.maximizeWindow()
-        const header = new Header(page)
-        await header.navigatToLoginPage()
-        const login = new LoginPage(page)
-        await login.makeLogin(configJson.loginPage.userName, configJson.loginPage.password)
+        ({ browser, page } = await launchBrowserAndMakeLogin());
     
     });
 
   
 
     test("check the user name after logout", async () => {
-        browserWrapper = new BrowserWrapper();
+        test.slow();
         const logout = new Logout(page);
         await logout.logoutLogoClick()
-
        expect(await logout.progileLogoContent()).toContain('התחברות')
     })
 })
