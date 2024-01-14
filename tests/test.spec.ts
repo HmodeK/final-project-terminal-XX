@@ -17,7 +17,7 @@ test.describe('Shopping website test', () => {
 
     test.beforeEach(async () => {
         page = await browser.getPage(configJson.url)
-        //browser.maximizeWindow()
+        browser.maximizeWindow()
         const header = new Header(page)
         await header.navigatToLoginPage()
         const login = new LoginPage(page)
@@ -25,13 +25,11 @@ test.describe('Shopping website test', () => {
     
     });
 
-    test.afterEach(async () => {
-        browser.closeBrowser()
-    });
+   
 
-    test.only('check logged in', async () => {
+   // test('check logged in', async () => {
       
-  })
+  //})
 
 
   })
