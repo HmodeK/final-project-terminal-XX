@@ -21,7 +21,4 @@ export class Header extends BasePage{
         const getString = await this.loginLabel.innerText();
         return getString
     };
-
-   
- }
- //button[@data-test-id="qa-header-profile-button"]
+}
