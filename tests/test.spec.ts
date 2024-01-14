@@ -22,7 +22,7 @@ test.beforeEach(async () => {
       const header = new Header(page)
       const receivedValue = await header.getLoggedInUserName();  
       expect(receivedValue).toContain("הי,");
-      expect(receivedValue).toContain("hmode");
+      expect(receivedValue).toContain(configJson.user);
   })
 
 
