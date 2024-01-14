@@ -24,5 +24,4 @@ test.describe('My test suite', () => {
         expect(receivedValue).toContain("הי,");
         expect(receivedValue).toContain("hmode");
     })
-
 });
