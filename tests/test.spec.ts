@@ -10,20 +10,18 @@ test.describe('My test suite', () => {
 
 
 
-test.beforeEach(async () => {
-    ({ browser, page } = await launchBrowserAndMakeLogin());
-});
+    test.beforeEach(async () => {
+        ({ browser, page } = await launchBrowserAndMakeLogin());
+    });
 
     test.afterEach(async () => {
         browser.closeBrowser()
     });
 
     test('check logged in', async () => {
-      const header = new Header(page)
-      const receivedValue = await header.getLoggedInUserName();  
-      expect(receivedValue).toContain("הי,");
-      expect(receivedValue).toContain(configJson.user);
-  })
-
-
-  });
+        const header = new Header(page)
+        const receivedValue = await header.getLoggedInUserName();
+        expect(receivedValue).toContain("הי,");
+        expect(receivedValue).toContain("hmode");
+    })
+});
