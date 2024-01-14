@@ -1,21 +1,17 @@
 {
-    "url" : "https://www.terminalx.com/",
-    "loginPage":
-    {
-        "userName" : "hmodekanaan5653@gmail.com",
-        "password" : "Hmodea5653@"
+    "url": "https://www.terminalx.com/",
+    "loginPage": {
+        "userName": "hmodekanaan5653@gmail.com",
+        "password": "Hmodea5653@"
     },
-
-    "user" : "hmode"
-
-    "configJson":
-    {
-        "name":"hmodekanaan5653@gmail.com",
-        "password" : "Hmodea5653@"
-
+    "user": "hmode",
+    
+    "showOptionyBy":{
+        "Show by" :"הצג לפי",
+        "sale" : "מבצע",
+        "JUST LANDED" : "JUST LANDED",
+        "BEST OFFER" : "BEST OFFER",
+        "Price: from low to high" : "מחיר : מהנמוך לגבוה",
+        "Price: from high to low" : "מחיר : מהגבוה לנמוך"
     }
-    
-
-    
-
 }
