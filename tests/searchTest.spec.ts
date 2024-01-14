@@ -19,6 +19,8 @@ test.describe('test for searching', ()=>{
     test('Perform search', async ()=>{
         const searching = new Searching(page);
         await searching.performSearch('תינוק');
-    });
+        await page.mouse.move(-2000,-2000);
+        await page.waitForTimeout(5000);  
+      });
 
 });
