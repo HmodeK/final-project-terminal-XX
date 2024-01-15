@@ -3,15 +3,13 @@ import { test, Page, expect } from '@playwright/test';
 import { launchBrowserAndMakeLogin } from '../fixture/fixture';
 import configJson from "../config.json"
 import { ProductsPage } from "../logic/Browser/productsPage";
-let page: Page;
 
-  
+let page: Page;
 
 test.describe('test for filter products', () => {
     let browser: BrowserWrapper;
     let page: Page;
    
-
     test("check  if the products filterd", async () => {
         const products = new ProductsPage(page);
         await products.filterFunction()
