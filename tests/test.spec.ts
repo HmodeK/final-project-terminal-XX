@@ -23,7 +23,8 @@ test.describe('My test suite', () => {
       const header = new Header(page)
       const receivedValue = await header.getLoggedInUserName();  
       expect(receivedValue).toContain("הי,");
-      expect(receivedValue).toContain(configJson.user);
+      expect(receivedValue).toContain("hmode");
+    
   })
 
 

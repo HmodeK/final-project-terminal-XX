@@ -6,7 +6,8 @@
         "password" : "Hmodea5653@"
     },
 
-    "user" : "hmode"
+    "user" : "hmode" ,
+    "expectedUrlFilter":"https://www.terminalx.com/on-sale/women?category_level=17942",
 
     "showOptionyBy":{
         "Show by" :"הצג לפי",
@@ -18,4 +19,3 @@
     },
     "expectedSortUrl" : "https://www.terminalx.com/women/pants-skirts/long-pants?product_list_order=stampa_sale"
 }
-    

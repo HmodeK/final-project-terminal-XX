@@ -10,14 +10,13 @@ test.describe('test for logout', () => {
     let browser: BrowserWrapper;
     let page: Page;
     test.beforeEach(async () => {
-        ({ browser, page } = await launchBrowserAndMakeLogin());
+       ({ browser, page } = await launchBrowserAndMakeLogin());
     
     });
 
   
 
     test("check the user name after logout", async () => {
-        test.slow();
         const logout = new Logout(page);
         await logout.logoutLogoClick()
        expect(await logout.progileLogoContent()).toContain('התחברות')
