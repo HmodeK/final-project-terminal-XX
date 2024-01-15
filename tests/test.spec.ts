@@ -16,14 +16,14 @@ test.describe('My test suite', () => {
         browser.closeBrowser()
     });
 
+
     test('check logged in ', async () => {
         page=await browser.getPage(configJson.url)
         const header = new Header(page)
       const receivedValue = await header.getLoggedinUserName();  
       expect(receivedValue).toContain(configJson.user);
+
   })
-
-
 
   test('Check if women items is sort by', async () => {
     page=await browser.getPage(configJson.url)

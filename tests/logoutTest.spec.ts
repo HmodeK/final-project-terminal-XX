@@ -7,10 +7,10 @@ test.describe('test for logout', () => {
     let browser: BrowserWrapper;
     let page: Page;
     
-    
     test.beforeEach(async () => {
+
         browser = new BrowserWrapper();
-    
+
     });
 
     test("check the user name after logout", async () => {
