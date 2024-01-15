@@ -6,16 +6,7 @@
         "password" : "Hmodea5653@"
     },
 
-    "user" : "hmode"
-
-    "configJson":
-    {
-        "name":"hmodekanaan5653@gmail.com",
-        "password" : "Hmodea5653@"
-
-    }
-    
-
-    
+    "user" : "hmode" ,
+    "expectedUrlFilter":"https://www.terminalx.com/on-sale/women?category_level=17942"
 
 }
