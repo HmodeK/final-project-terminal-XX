@@ -2,8 +2,7 @@ import { BrowserWrapper } from "../infra/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
 import { launchBrowserAndMakeLogin } from '../fixture/fixture';
 import configJson from "../config.json"
-
-import { ProductsPage } from "../logic/productsPage";
+import { ProductsPage } from "../logic/Browser/productsPage";
 let page: Page;
 
   
