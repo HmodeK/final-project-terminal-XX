@@ -28,4 +28,15 @@ test.describe('My test suite', () => {
   })
 
 
+
+  test('Check if women items is sorte by', async () => {
+    const header = new Header(page)
+    await header.goToWomenPage()
+    const selectOptionBy = new ProductPage(page)
+    await selectOptionBy.selectCategoryBy(configJson.showOptionyBy.sale) 
+    expect(await page.url()).toBe(configJson.expectedSortUrl)
+    
+
+})
+
   });
