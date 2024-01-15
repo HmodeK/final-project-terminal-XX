@@ -1,11 +1,13 @@
 {
-    "url": "https://www.terminalx.com/",
-    "loginPage": {
-        "userName": "hmodekanaan5653@gmail.com",
-        "password": "Hmodea5653@"
+    "url" : "https://www.terminalx.com/",
+    "loginPage":
+    {
+        "userName" : "hmodekanaan5653@gmail.com",
+        "password" : "Hmodea5653@"
     },
-    "user": "hmode",
-    
+
+    "user" : "hmode"
+
     "showOptionyBy":{
         "Show by" :"הצג לפי",
         "sale" : "מבצע",
@@ -16,3 +18,4 @@
     },
     "expectedSortUrl" : "https://www.terminalx.com/women/pants-skirts/long-pants?product_list_order=stampa_sale"
 }
+    

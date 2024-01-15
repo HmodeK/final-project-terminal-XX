@@ -11,9 +11,9 @@ test.describe('My test suite', () => {
 
 
 
-test.beforeEach(async () => {
-    ({ browser, page } = await launchBrowserAndMakeLogin());
-});
+    test.beforeEach(async () => {
+        ({ browser, page } = await launchBrowserAndMakeLogin());
+    });
 
     test.afterEach(async () => {
         browser.closeBrowser()
@@ -25,6 +25,7 @@ test.beforeEach(async () => {
       expect(receivedValue).toContain("הי,");
       expect(receivedValue).toContain(configJson.user);
   })
+
 
 
   test('Check if women items is sorte by', async () => {
