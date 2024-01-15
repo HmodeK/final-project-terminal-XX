@@ -1,5 +1,9 @@
 {
     "url" : "https://www.terminalx.com/",
+    "apiLoginUrl":"https://www.terminalx.com/pg/MutationUserLogin?v=I9dIkXxqUgEmvaClIy6g3%2FMlpMA%3D",
+    
+    "authFile":"playwright/.auth/user.json",
+
     "loginPage":
     {
         "userName" : "hmodekanaan5653@gmail.com",
@@ -7,7 +11,6 @@
     },
 
     "user" : "hmode" ,
-    "expectedUrlFilter":"https://www.terminalx.com/on-sale/women?category_level=17942",
 
     "showOptionyBy":{
         "Show by" :"הצג לפי",
@@ -17,5 +20,9 @@
         "Price: from low to high" : "מחיר : מהנמוך לגבוה",
         "Price: from high to low" : "מחיר : מהגבוה לנמוך"
     },
-    "expectedSortUrl" : "https://www.terminalx.com/women/pants-skirts/long-pants?product_list_order=stampa_sale"
+    "expectedSortUrl" : "https://www.terminalx.com/women/pants-skirts/long-pants?product_list_order=stampa_sale", 
+    "expectedUrlFilter":"https://www.terminalx.com/women/pants-skirts/long-pants?size_group=10622" 
+
 }
+  
+

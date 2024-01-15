@@ -1,14 +1,12 @@
-import { BasePage } from "../infra/base-page";
-import {  Locator,  Page } from '@playwright/test';
-
+import { BasePage } from "../../infra/base-page";
+import {  Locator,  Page } from 'playwright';
  
 export class Logout extends BasePage {
 
     private profileLogo :Locator
     private logoutButoon :Locator
 
-    constructor(page : Page){
-
+    constructor( page : Page){
         super(page)
         this.profileLogo=page.locator('[data-test-id="qa-header-profile-button"]')
         this.logoutButoon=page.getByText('Log Out')
@@ -35,5 +33,3 @@ export class Logout extends BasePage {
         }
         
     }
-
-
