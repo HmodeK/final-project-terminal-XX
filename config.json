@@ -13,5 +13,6 @@
         "BEST OFFER" : "BEST OFFER",
         "Price: from low to high" : "מחיר : מהנמוך לגבוה",
         "Price: from high to low" : "מחיר : מהגבוה לנמוך"
-    }
+    },
+    "expectedSortUrl" : "https://www.terminalx.com/women/pants-skirts/long-pants?product_list_order=stampa_sale"
 }
