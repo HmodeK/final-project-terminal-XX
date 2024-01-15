@@ -1,9 +1,9 @@
 import { BrowserWrapper } from "../infra/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
 import { launchBrowserAndMakeLogin } from '../fixture/fixture';
-import { Header } from "../logic/header";
+import { Header } from "../logic/Browser/header";
 import configJson from "../config.json"
-import { LongPantsPage } from "../logic/long-pants-page";
+import { ProductPage } from "../logic/Browser/product-page";
 
 test.describe('My test suite', () => {
     let browser: BrowserWrapper;
@@ -30,9 +30,9 @@ test.beforeEach(async () => {
   test('Check if women items is sorte by', async () => {
     const header = new Header(page)
     await header.goToWomenPage()
-    const selectOptionBy = new LongPantsPage(page)
+    const selectOptionBy = new ProductPage(page)
     await selectOptionBy.selectCategoryBy(configJson.showOptionyBy.sale) 
-    await page.waitForTimeout(5000)
+    expect(await page.url()).toBe(configJson.expectedSortUrl)
 
 })
 

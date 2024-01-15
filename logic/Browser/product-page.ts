@@ -1,8 +1,8 @@
 import { privateDecrypt } from "crypto";
-import { BasePage } from "../infra/base-page";
+import { BasePage } from "../../infra/base-page";
 import { Locator , Page } from "playwright";
 
-export class LongPantsPage extends BasePage{
+export class ProductPage extends BasePage{
 
     private showByButton : Locator
 
