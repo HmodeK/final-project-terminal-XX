@@ -33,6 +33,7 @@ test.beforeEach(async () => {
     const selectOptionBy = new ProductPage(page)
     await selectOptionBy.selectCategoryBy(configJson.showOptionyBy.sale) 
     expect(await page.url()).toBe(configJson.expectedSortUrl)
+    
 
 })
 
