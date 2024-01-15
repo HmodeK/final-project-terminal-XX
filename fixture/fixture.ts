@@ -1,8 +1,8 @@
 import { Page } from "@playwright/test";
 import configJson from "../config.json"
 import { BrowserWrapper } from "../infra/browser-wrapper";
-import { Header } from "../logic/header";
-import { LoginPage } from "../logic/login-page";
+import { Header } from "../logic/Browser/header";
+import { LoginPage } from "../logic/Browser/login-page";
 
 let browser: BrowserWrapper;
 let page: Page;
