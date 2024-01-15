@@ -1,7 +1,7 @@
 import { test, Page, expect } from '@playwright/test';
 import { BrowserWrapper } from "../infra/browser-wrapper";
-import { Searching } from "../logic/searching";
 import { launchBrowserAndMakeLogin } from '../fixture/fixture';
+import { Searching } from '../logic/Browser/searching';
 
 
 test.describe('test for searching', ()=>{
@@ -19,7 +19,8 @@ test.describe('test for searching', ()=>{
     test('Perform search', async ()=>{
         const searching = new Searching(page);
         await searching.performSearch('תינוק');
-        expect(5==5)
-    });
+        await page.mouse.move(-2000,-2000);
+        await page.waitForTimeout(5000);  
+      });
 
 });

@@ -1,8 +1,9 @@
 import { BrowserWrapper } from "../infra/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
 import { launchBrowserAndMakeLogin } from '../fixture/fixture';
-import { Header } from "../logic/header";
+import { Header } from "../logic/Browser/header";
 import configJson from "../config.json"
+import { ProductPage } from "../logic/Browser/product-page";
 
 test.describe('My test suite', () => {
     let browser: BrowserWrapper;
@@ -10,9 +11,9 @@ test.describe('My test suite', () => {
 
 
 
-test.beforeEach(async () => {
-    ({ browser, page } = await launchBrowserAndMakeLogin());
-});
+    test.beforeEach(async () => {
+        ({ browser, page } = await launchBrowserAndMakeLogin());
+    });
 
     test.afterEach(async () => {
         browser.closeBrowser()

@@ -1,6 +1,6 @@
 import { BrowserWrapper } from "../infra/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
-import { Logout } from "../logic/logout";
+import { Logout } from "../logic/Browser/logout";
 import { launchBrowserAndMakeLogin } from '../fixture/fixture';
 
 
@@ -20,5 +20,6 @@ test.describe('test for logout', () => {
         const logout = new Logout(page);
         await logout.logoutLogoClick()
        expect(await logout.progileLogoContent()).toContain('התחברות')
+       
     })
 })
