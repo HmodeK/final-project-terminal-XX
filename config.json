@@ -21,6 +21,7 @@
         "Price: from high to low" : "מחיר : מהגבוה לנמוך"
     },
     "expectedSortUrl" : "https://www.terminalx.com/women/pants-skirts/long-pants?product_list_order=stampa_sale", 
-    "expectedUrlFilter":"https://www.terminalx.com/women/pants-skirts/long-pants?size_group=10622" 
+    "expectedUrlFilter":"https://www.terminalx.com/women/pants-skirts/long-pants?size_group=10622" ,
+    "expectedWishListUrl":"https://www.terminalx.com/wishlist/items"
 
 }

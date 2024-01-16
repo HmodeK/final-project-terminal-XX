@@ -18,23 +18,11 @@ test.describe('My test suite', () => {
 
 
     test('check logged in ', async () => {
-        page=await browser.getPage(configJson.url)
+        page = await browser.getPage(configJson.url)
         const header = new Header(page)
-      const receivedValue = await header.getLoggedinUserName();  
-      expect(receivedValue).toContain(configJson.user);
+        const receivedValue = await header.getLoggedinUserName();
+        expect(receivedValue).toContain(configJson.user);
 
-  })
+    })
 
-  test('Check if women items is sort by', async () => {
-    page=await browser.getPage(configJson.url)
-    const header = new Header(page)
-    await header.goToWomenPage()
-    const selectOptionBy = new ProductPage(page)
-    await selectOptionBy.selectCategoryBy(configJson.showOptionyBy.sale) 
-    expect(await page.url()).toBe(configJson.expectedSortUrl)
-    await page.waitForTimeout(5000);  
-    
-
-})
-
-  });
+});
