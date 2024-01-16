@@ -1,6 +1,7 @@
 import { lcov } from "node:test/reporters";
 import { BasePage } from "../../infra/base-page";
 import { Locator , Page } from "playwright";
+import { waitForElementToBeVisible } from "../../utils/wait-for-elements";
 export class FilterProducts extends BasePage {
 
     
