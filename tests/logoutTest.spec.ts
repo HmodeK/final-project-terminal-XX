@@ -10,11 +10,10 @@ test.describe('test for logout', () => {
     test.beforeEach(async () => {
 
         browser = new BrowserWrapper();
-
+        page=await browser.getPage(configJson.url)
     });
 
     test("check the user name after logout", async () => {
-        page=await browser.getPage(configJson.url)
         test.slow();
         const logout = new Logout(page);
         await logout.logoutLogoClick()

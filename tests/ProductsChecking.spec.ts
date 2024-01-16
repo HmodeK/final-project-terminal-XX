@@ -26,15 +26,11 @@ test.describe('test for  products', () => {
         const selectOptionBy = new ProductPage(page)
         await selectOptionBy.selectCategoryBy(configJson.showOptionyBy.sale)
         expect(await page.url()).toBe(configJson.expectedSortUrl)
-
-
     })
 
     test("check  if the products filterd", async () => {
         const selectOptionBy = new FilterProducts(page)
         await selectOptionBy.filterFunction()
         expect(await page.url()).toBe(configJson.expectedUrlFilter)
-
-
     })
 })
