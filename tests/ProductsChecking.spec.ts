@@ -36,7 +36,7 @@ test.describe('test for  products', () => {
         const header = new Header(page)
          await header.goToWomenPage()
         const selectOptionBy = new FilterProducts(page)
-        await selectOptionBy.filterFunction()
+        await selectOptionBy.filterFlow()
         expect(await page.url()).toBe(configJson.expectedUrlFilter)
     })
 })

@@ -24,7 +24,7 @@ export class FilterProducts extends BasePage {
         await this.filterButton.click()
         }
         
-    filterFunction=async () => {
+    filterFlow=async () => {
           this.filterOptionClick()
           this.filterButtonClick()
 
