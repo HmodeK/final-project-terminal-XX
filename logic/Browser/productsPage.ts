@@ -11,7 +11,7 @@ export class FilterProducts extends BasePage {
     
     constructor(page:Page){
         super(page)
-        this.filterOption=page.locator('//*[@id="app-root"]/div[2]/main/div[2]/div/div[3]/div[2]/div/div[3]/ol/li[1]/div/div')
+        this.filterOption=page.locator('[class="header_OqIf"]').nth(0)
         this.filterButton=page.getByText('ONE SIZE')
         this.initPage()
 

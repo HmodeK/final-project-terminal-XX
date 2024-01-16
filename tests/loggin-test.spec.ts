@@ -2,8 +2,6 @@ import { BrowserWrapper } from "../infra/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
 import { Header } from "../logic/Browser/header";
 import configJson from "../config.json"
-import { addItem_to_cart } from "../logic/api/api-request";
-import { CartPage } from "../logic/Browser/cart-page";
 
 test.describe('My test suite', () => {
     let browser: BrowserWrapper;
@@ -25,6 +23,4 @@ test.describe('My test suite', () => {
         expect(receivedValue).toContain(configJson.user);
 
     })
-
- 
 });
