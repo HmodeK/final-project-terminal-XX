@@ -3,7 +3,7 @@ import { Locator, Page } from "playwright";
 
 export class BrandPage extends BasePage {
 
-    private brandIcon : Locator
+    private brandIcon: Locator
 
     constructor(page: Page) {
         super(page)
