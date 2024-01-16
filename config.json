@@ -23,7 +23,8 @@
     },
     
     "expectedSortUrl" : "https://www.terminalx.com/women/pants-skirts/long-pants?product_list_order=stampa_sale", 
-    "expectedUrlFilter":"https://www.terminalx.com/women/pants-skirts/long-pants?size_group=10622", 
-
+    "expectedUrlFilter":"https://www.terminalx.com/women/pants-skirts/long-pants?size_group=10622" ,
+    "expectedWishListUrl":"https://www.terminalx.com/wishlist/items",
+    "expecterBrandUrl":"https://www.terminalx.com/brands/adidas-all",
     "authFile":"playwright/.auth/user.json"
 }

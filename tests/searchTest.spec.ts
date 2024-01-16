@@ -1,5 +1,5 @@
 import { test, Page, expect } from '@playwright/test';
-import { BrowserWrapper } from "../infra/browser-wrapper";
+import { BrowserWrapper } from "../infra/browser-wrapper"; 
 import { Searching } from '../logic/Browser/searching';
 import configJson from "../config.json"
 
@@ -9,7 +9,6 @@ test.describe('test for searching', ()=>{
 
     test.beforeEach(async() =>{
         browser = new BrowserWrapper();
-        page=await browser.getPage(configJson.url)
     });
 
     test.afterEach(async () => {
@@ -22,5 +21,4 @@ test.describe('test for searching', ()=>{
         await page.mouse.move(-2000,-2000);
         await page.waitForTimeout(5000);  
       });
-
 });
