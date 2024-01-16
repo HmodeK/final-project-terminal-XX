@@ -1,30 +1,33 @@
 {
-    "url" : "https://www.terminalx.com/",
-    "apiLoginUrl":"https://www.terminalx.com/pg/MutationUserLogin?v=I9dIkXxqUgEmvaClIy6g3%2FMlpMA%3D",
-    "apiAddToCartUrl" : "https://www.terminalx.com/pg/MutationAddAnyProductsToAnyCart?v=t4MeNg4Nhm8cTtfc8ZbCpP00Dzo%3D",
-    "uiCartPageUrl": "https://www.terminalx.com/checkout/cart",
+    "loginPage": {
+        "userName": "hmodekanaan5653@gmail.com",
+        "password": "Hmodea5653@"
+    },
+    "apiUrl": {
+        "loginUrl": "https://www.terminalx.com/pg/MutationUserLogin?v=I9dIkXxqUgEmvaClIy6g3%2FMlpMA%3D",
+        "addToCartUrl": "https://www.terminalx.com/pg/MutationAddAnyProductsToAnyCart?v=t4MeNg4Nhm8cTtfc8ZbCpP00Dzo%3D"
+    },
+    "uiUrl": {
+        "websiteUrl": "https://www.terminalx.com/",
+        "cartPageUrl": "https://www.terminalx.com/checkout/cart"
+    },
+    "expectedUrls": {
+        "sortUrl": "https://www.terminalx.com/women/pants-skirts/long-pants?product_list_order=stampa_sale",
+        "filterUrl": "https://www.terminalx.com/women/pants-skirts/long-pants?size_group=10622",
+        "wishListUrl": "https://www.terminalx.com/wishlist/items",
+        "brandUrl": "https://www.terminalx.com/brands/adidas-all"
+    },
+    "category": {
+        "showOptionyBy": {
+            "Show by": "הצג לפי",
+            "sale": "מבצע",
+            "JUST LANDED": "JUST LANDED",
+            "BEST OFFER": "BEST OFFER",
+            "Price: from low to high": "מחיר : מהנמוך לגבוה",
+            "Price: from high to low": "מחיר : מהגבוה לנמוך"
+        }
+    },
     "itemIdThatsAdded": "W25546000106",
-
-    "loginPage":
-    {
-        "userName" : "hmodekanaan5653@gmail.com",
-        "password" : "Hmodea5653@"
-    },
-
-    "user" : "hmode" ,
-
-    "showOptionyBy":{
-        "Show by" :"הצג לפי",
-        "sale" : "מבצע",
-        "JUST LANDED" : "JUST LANDED",
-        "BEST OFFER" : "BEST OFFER",
-        "Price: from low to high" : "מחיר : מהנמוך לגבוה",
-        "Price: from high to low" : "מחיר : מהגבוה לנמוך"
-    },
-    
-    "expectedSortUrl" : "https://www.terminalx.com/women/pants-skirts/long-pants?product_list_order=stampa_sale", 
-    "expectedUrlFilter":"https://www.terminalx.com/women/pants-skirts/long-pants?size_group=10622" ,
-    "expectedWishListUrl":"https://www.terminalx.com/wishlist/items",
-    "expecterBrandUrl":"https://www.terminalx.com/brands/adidas-all",
-    "authFile":"playwright/.auth/user.json"
+    "authFile": "playwright/.auth/user.json",
+    "user": "hmode"
 }

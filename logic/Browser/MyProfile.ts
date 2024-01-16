@@ -1,5 +1,5 @@
 import { Locator, Page } from "playwright";
-import { BasePage } from "../../infra/base-page";
+import { BasePage } from "../../infra/browser/base-page";
 
 
 export class MyProfile extends BasePage {

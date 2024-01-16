@@ -10,5 +10,8 @@ export class BasePage {
         await this.page.waitForLoadState("load")
     }
 
+    async refreshPage(){
+        await this.page.reload();
+    }
 }
 

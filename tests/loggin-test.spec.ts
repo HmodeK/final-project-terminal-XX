@@ -1,4 +1,4 @@
-import { BrowserWrapper } from "../infra/browser-wrapper";
+import { BrowserWrapper } from "../infra/browser/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
 import { Header } from "../logic/Browser/header";
 import configJson from "../config.json"
@@ -9,8 +9,7 @@ test.describe('My test suite', () => {
 
     test.beforeEach(async () => {
         browser = new BrowserWrapper();
-        page = await browser.getPage(configJson.url)
-        const header = new Header(page)
+        page = await browser.getPage(configJson.uiUrl.websiteUrl)
     });
 
     test.afterEach(async () => {
