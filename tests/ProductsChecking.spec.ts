@@ -11,9 +11,9 @@ test.describe('test for  products', () => {
 
     test.beforeEach(async () => {
         browser = new BrowserWrapper();
-        page=await browser.getPage(configJson.url)
+        page = await browser.getPage(configJson.url)
         const header = new Header(page)
-         await header.goToWomenPage()
+        await header.goToWomenPage()
 
     });
 
@@ -32,9 +32,9 @@ test.describe('test for  products', () => {
     })
 
     test("check  if the products filterd", async () => {
-        page=await browser.getPage(configJson.url)
+        page = await browser.getPage(configJson.url)
         const header = new Header(page)
-         await header.goToWomenPage()
+        await header.goToWomenPage()
         const selectOptionBy = new FilterProducts(page)
         await selectOptionBy.filterFlow()
         expect(await page.url()).toBe(configJson.expectedUrlFilter)
