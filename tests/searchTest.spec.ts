@@ -9,6 +9,7 @@ test.describe('test for searching', ()=>{
 
     test.beforeEach(async() =>{
         browser = new BrowserWrapper();
+        page=await browser.getPage(configJson.url)
     });
 
     test.afterEach(async () => {
@@ -16,7 +17,6 @@ test.describe('test for searching', ()=>{
     });
 
     test('Perform search', async ()=>{
-        page=await browser.getPage(configJson.url)
         const searching = new Searching(page);
         await searching.performSearch('תינוק');
         await page.mouse.move(-2000,-2000);
