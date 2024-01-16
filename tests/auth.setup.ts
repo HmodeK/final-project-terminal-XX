@@ -2,7 +2,6 @@ import { expect, test as setup } from '@playwright/test';
 import configJson from "../config.json"
 import { makeLogin } from '../logic/api/api-request';
 
-  
 setup('authenticate', async ({ browser, request }) => {
     await makeLogin(request);
     const state = await request.storageState();

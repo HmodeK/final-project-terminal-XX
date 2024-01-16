@@ -1,5 +1,5 @@
 import { test, Page, expect } from '@playwright/test';
-import { BrowserWrapper } from "../infra/browser-wrapper";
+import { BrowserWrapper } from "../infra/browser-wrapper"; 
 import { Searching } from '../logic/Browser/searching';
 import configJson from "../config.json"
 
@@ -8,7 +8,7 @@ test.describe('test for searching', ()=>{
     let page : Page;
 
     test.beforeEach(async() =>{
-        browser = new BrowserWrapper();
+      browser = new BrowserWrapper();  
     });
 
     test.afterEach(async () => {
