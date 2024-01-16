@@ -1,6 +1,6 @@
-import { Locator } from "playwright";
+import { Locator ,Page } from "playwright";
 
-export const waitForElementToBeVisible = async (locator:Locator,time:number,retry:number):Promise<boolean> => {
+export const waitForElementToBeVisible = async (locator:Locator,time=1000,retry=5):Promise<boolean> => {
 
     while(retry >0){
        if(await locator.isVisible()){
@@ -26,4 +26,8 @@ export const waitForElementToBeEnabled = async (locator:Locator,time:number,retr
 
 function delay(ms: number) {
     return new Promise( resolve => setTimeout(resolve, ms) );
+}
+
+export const waitForTimeOut = async (page: Page, time=5000) => {
+    await page.waitForTimeout(time);
 }

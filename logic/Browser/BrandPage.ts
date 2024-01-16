@@ -1,9 +1,9 @@
-import { BasePage } from "../../infra/base-page";
+import { BasePage } from "../../infra/browser/base-page";
 import { Locator, Page } from "playwright";
 
 export class BrandPage extends BasePage {
 
-    private brandIcon : Locator
+    private brandIcon: Locator
 
     constructor(page: Page) {
         super(page)
@@ -12,7 +12,5 @@ export class BrandPage extends BasePage {
     }
     brandClick = async () => {
         await this.brandIcon.click()
-
-
     }
 }
