@@ -23,6 +23,7 @@ test.describe('Added item and validate if item is added vi api & ui', () => {
     test('add to cart via Api & validating if item is added via Ui', async () => {
         const api = new ApiCalls()
         const data = buildCartRequest(details.itemIdThatsAdded,1)
+        await api.addItemToCart(data)
         page = await browser.getPage(urls.uiUrl.cartPageUrl)
         const cartPage = new CartPage(page)
         expect(await cartPage.checkTheItemIsAdded()).toBe(1)
