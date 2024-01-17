@@ -7,12 +7,11 @@
     "uiUrl": {
         "websiteUrl": "https://www.terminalx.com/",
         "cartPageUrl": "https://www.terminalx.com/checkout/cart",
+        "productPageUrl":"https://www.terminalx.com/kids/teen/shirts/w215142015?color=9077",
         "address":"https://www.terminalx.com/customer/address?limit=10"
     },
     "expectedUrls": {
         "sortUrl": "https://www.terminalx.com/women/pants-skirts/long-pants?product_list_order=stampa_sale",
-        "filterUrl": "https://www.terminalx.com/women/pants-skirts/long-pants?size_group=10622",
-        "wishListUrl": "https://www.terminalx.com/wishlist/items",
-        "brandUrl": "https://www.terminalx.com/brands/adidas-all"
+        "filterUrl": "https://www.terminalx.com/women/pants-skirts/long-pants?size_group=10622"
     }
 }
