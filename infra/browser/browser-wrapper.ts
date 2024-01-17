@@ -14,7 +14,7 @@ export class BrowserWrapper {
     }
     async maximizeWindow() {
         if (this.page) {
-            await this.page.setViewportSize({ width: 1920, height: 1080 });
+            await this.page.setViewportSize({ width: 1000, height: 1000 });
         }
     }
     async closeBrowser() {

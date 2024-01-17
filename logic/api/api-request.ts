@@ -1,5 +1,5 @@
 import { apiPostMethod } from "../../infra/api/api-request"
-import { CartRequest } from "./request-body/addToCart-api-requests"
+import { CartRequest } from "./request-body/add-to-cart-api-requests"
 import { UserCredential } from "./request-body/login-api-request"
 import { APIRequestContext, request } from "playwright"
 import urlsConfig from "../../configFiles/urls.json"

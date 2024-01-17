@@ -16,7 +16,7 @@ export class BrandPage extends BasePage {
         await this.brandIcon.click()
     }
     productListContnet =async () => {
-        return this.adidasProduct.nth(0).textContent()
+        return this.adidasProduct.first().textContent()
         
     }
 }

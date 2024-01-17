@@ -1,6 +1,6 @@
 import { BrowserWrapper } from "../infra/browser/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
-import { MyProfile } from "../logic/Browser/MyProfile";
+import { MyProfile } from "../logic/Browser/my-profile";
 import users from "../configFiles/user-details.json"
 import urls from "../configFiles/urls.json"
 

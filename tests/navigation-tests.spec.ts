@@ -17,7 +17,7 @@ test.describe('test for navigation via ui', () => {
         await browser.closeBrowser()
     });
 
-    test("check the brand icon click navigate to brand page", async () => {
+    test("check the brand icon click navigate to brand products", async () => {
         const brandName = new BrandPage(page)
         await brandName.brandClick()
         expect(await brandName.productListContnet()).toContain('ADIDAS')
