@@ -1,6 +1,6 @@
 import { BrowserWrapper } from "../infra/browser/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
-import { Logout } from "../logic/Browser/logout";
+import { Logout } from "../logic/browser/logout";
 import urls from "../configFiles/urls.json"
 
 test.describe('test for logout', () => {

@@ -1,6 +1,6 @@
 import { BrowserWrapper } from "../infra/browser/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
-import { WishListPage } from "../logic/Browser/wishlist-page";
+import { WishListPage } from "../logic/browser/wishlist-page";
 import urls from "../configFiles/urls.json"
 
 test.describe('test for  add to wishList navigation via ui', () => {

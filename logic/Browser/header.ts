@@ -18,17 +18,14 @@ export class Header extends BasePage {
     getLoggedinUserName = async (): Promise<string> => {
         return await this.loggedinUsername.innerText()
     }
-
     hoverOnWomenLabel = async () => {
         await waitForElementToBeVisible(this.loggedinUsername, 1000, 5)
         await this.womenLabel.nth(2).hover()
     }
-
     clickOnWomenTypeOfItem = async () => {
         await waitForElementToBeVisible(this.loggedinUsername, 3000, 5)
         await this.womenTypeOfItem.click()
     }
-
     goToWomenPage = async () => {
         await this.hoverOnWomenLabel()
         await this.clickOnWomenTypeOfItem()

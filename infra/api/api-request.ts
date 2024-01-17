@@ -11,5 +11,4 @@ const apiPostMethod = async <T>(url: string, data?: any, availableRequest?: APIR
    };
    return responseWrapper;
 }
-
 export{apiPostMethod}

@@ -1,8 +1,8 @@
 import { BrowserWrapper } from "../infra/browser/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
-import { Header } from "../logic/Browser/header";
-import { ProductPage } from "../logic/Browser/product-sort";
-import { FilterProducts } from "../logic/Browser/product-filter";
+import { Header } from "../logic/browser/header";
+import { ProductPage } from "../logic/browser/product-sort";
+import { FilterProducts } from "../logic/browser/product-filter";
 import category from "../configFiles/category.json"
 import urls from "../configFiles/urls.json"
 

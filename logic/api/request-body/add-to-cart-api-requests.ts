@@ -6,8 +6,9 @@ export interface CartItem {
 }
 
 export interface CartRequest {
-    data:{cart_items: CartItem[];
-    skip_collect: number;
+    data: {
+        cart_items: CartItem[];
+        skip_collect: number;
     }
 }
 

@@ -17,6 +17,5 @@ export class BrandPage extends BasePage {
     }
     productListContnet =async () => {
         return this.adidasProduct.first().textContent()
-        
     }
 }
