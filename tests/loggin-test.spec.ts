@@ -14,7 +14,7 @@ test.describe('My test suite', () => {
     });
 
     test.afterEach(async () => {
-        browser.closeBrowser()
+        await browser.closeBrowser()
     });
 
     test('check logged in ', async () => {
