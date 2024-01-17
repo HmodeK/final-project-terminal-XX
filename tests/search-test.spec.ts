@@ -1,6 +1,6 @@
 import { test, Page, expect } from '@playwright/test';
 import { BrowserWrapper } from "../infra/browser/browser-wrapper"; 
-import { Searching } from '../logic/Browser/product-search';
+import { Searching } from '../logic/browser/product-search';
 import urls from "../configFiles/urls.json"
 
 test.describe('test for searching about products', ()=>{

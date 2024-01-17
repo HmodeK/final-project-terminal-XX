@@ -18,7 +18,6 @@ export class WishListPage extends BasePage {
     this.initPage()
 
   }
-
   heartIconClick = async () => {
     waitForElementToBeVisible(this.heartIcon, 3000)
     await this.heartIcon.click()
@@ -35,9 +34,6 @@ export class WishListPage extends BasePage {
   removeItemFtomWishList = async () => {
     await this.removeButton.click()
 
-
   }
-
-
 
 }
