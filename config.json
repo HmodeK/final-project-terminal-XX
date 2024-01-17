@@ -1,26 +1,22 @@
 {
-    "url" : "https://www.terminalx.com/",
-    "apiLoginUrl":"https://www.terminalx.com/pg/MutationUserLogin?v=I9dIkXxqUgEmvaClIy6g3%2FMlpMA%3D",
-    
-    "authFile":"playwright/.auth/user.json",
-
-    "loginPage":
-    {
-        "userName" : "hmodekanaan5653@gmail.com",
-        "password" : "Hmodea5653@"
+    "url": "https://www.terminalx.com/",
+    "apiLoginUrl": "https://www.terminalx.com/pg/MutationUserLogin?v=I9dIkXxqUgEmvaClIy6g3%2FMlpMA%3D",
+    "authFile": "playwright/.auth/user.json",
+    "loginPage": {
+        "userName": "hmodekanaan5653@gmail.com",
+        "password": "Hmodea5653@"
     },
-
-    "user" : "hmode" ,
-
-    "showOptionyBy":{
-        "Show by" :"הצג לפי",
-        "sale" : "מבצע",
-        "JUST LANDED" : "JUST LANDED",
-        "BEST OFFER" : "BEST OFFER",
-        "Price: from low to high" : "מחיר : מהנמוך לגבוה",
-        "Price: from high to low" : "מחיר : מהגבוה לנמוך"
+    "user": "hmode",
+    "showOptionyBy": {
+        "Show by": "הצג לפי",
+        "sale": "מבצע",
+        "JUST LANDED": "JUST LANDED",
+        "BEST OFFER": "BEST OFFER",
+        "Price: from low to high": "מחיר : מהנמוך לגבוה",
+        "Price: from high to low": "מחיר : מהגבוה לנמוך"
     },
-    "expectedSortUrl" : "https://www.terminalx.com/women/pants-skirts/long-pants?product_list_order=stampa_sale", 
-    "expectedUrlFilter":"https://www.terminalx.com/women/pants-skirts/long-pants?size_group=10622" 
-
+    "expectedSortUrl": "https://www.terminalx.com/women/pants-skirts/long-pants?product_list_order=stampa_sale",
+    "expectedUrlFilter": "https://www.terminalx.com/women/pants-skirts/long-pants?size_group=10622",
+    "addressUrl": "https://www.terminalx.com/pg/MutationCreateCustomerAddress?v=7M21Ktwz3hl5WT0GoUlh5nBYIc4%3",
+    "address":"https://www.terminalx.com/customer/address?limit=10"
 }

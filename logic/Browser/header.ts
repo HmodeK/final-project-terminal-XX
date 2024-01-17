@@ -1,7 +1,6 @@
 import { Locator, Page } from "playwright";
 import { BasePage } from "../../infra/base-page";
-import { waitForElementToBeVisible } from "../../utils/wait-for-elements";
-
+import { waitForElementToBeVisibale } from "../../infra/util";
 export class Header extends BasePage {
 
     private loggedinUsername: Locator
@@ -19,14 +18,13 @@ export class Header extends BasePage {
         return await this.loggedinUsername.innerText()
     }
 
-
     hoverOnWomenLabel = async () => {
-        const wait = await waitForElementToBeVisible(this.loggedinUsername, 1000, 5)
+        const wait = await waitForElementToBeVisibale(this.loggedinUsername, 1000, 5)
         await this.womenLabel.nth(2).hover()
     }
 
     clickOnWomenTypeOfItem = async () => {
-        const wait = await waitForElementToBeVisible(this.loggedinUsername, 1000, 5)
+        const wait = await waitForElementToBeVisibale(this.loggedinUsername, 1000, 5)
         await this.womenTypeOfItem.click()
     }
 
@@ -35,12 +33,3 @@ export class Header extends BasePage {
         await this.clickOnWomenTypeOfItem()
     }
 }
-
-
-
-
-
-
-
-
-
