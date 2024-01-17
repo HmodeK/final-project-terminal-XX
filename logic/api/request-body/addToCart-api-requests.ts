@@ -5,7 +5,7 @@ export interface CartItem {
     };
 }
 
-interface CartRequest {
+export interface CartRequest {
     cart_items: CartItem[];
     skip_collect: number;
 }
@@ -23,9 +23,3 @@ export const buildCartRequest = (itemId: string, quantity: number): CartRequest 
         skip_collect: 1,
     };
 };
-
-export const requestOptionsAddToCart = (itemId: string, quantity: number) => {
-    return {
-        data: buildCartRequest(itemId, quantity)
-    }
-}

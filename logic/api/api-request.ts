@@ -1,13 +1,19 @@
-import configJson from "../../config.json"
-import { apiPostMethod, makeLoginViaApi } from "../../infra/api/api-request"
-import { requestOptionsAddToCart } from "./request-body/Add-to-cart-api-requests"
-import { requestOptionsUserLogin } from "./request-body/login-api-request"
-import { APIRequestContext } from "playwright"
+import { apiPostMethod } from "../../infra/api/api-request"
+import { CartRequest } from "./request-body/addToCart-api-requests"
+import { UserCredential } from "./request-body/login-api-request"
+import { APIRequestContext, request } from "playwright"
+import urlsConfig from "../../configFiles/urls.json"
 
-export const makeLogin = async (request: APIRequestContext) => {
-    return await makeLoginViaApi(configJson.apiUrl.loginUrl, requestOptionsUserLogin(configJson.loginPage.userName, configJson.loginPage.password), request)
-}
+export class ApiCalls {
+    makeLoginViaApi = async <T>(url: string, data?: any, availableRequest?: APIRequestContext) => {
+        const myRequest = availableRequest || (await request.newContext());
+        await myRequest.post(url, data);
+    }
+    makeLogin = async (data: UserCredential, request: APIRequestContext) => {
+        return await this.makeLoginViaApi(urlsConfig.apiUrl.loginUrl, data, request)
+    }
 
-export const addItem_to_cart = async (itemId: string, qty: number) => {
-    return await apiPostMethod(configJson.apiUrl.addToCartUrl, requestOptionsAddToCart(itemId, qty))
+    addItem_to_cart = async (data: CartRequest) => {
+        return await apiPostMethod(urlsConfig.apiUrl.addToCartUrl, data)
+    }
 }

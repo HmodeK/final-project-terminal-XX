@@ -1,7 +1,8 @@
 import { BrowserWrapper } from "../infra/browser/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
 import { Header } from "../logic/Browser/header";
-import configJson from "../config.json"
+import users from "../configFiles/user-details.json"
+import urls from "../configFiles/urls.json"
 
 test.describe('My test suite', () => {
     let browser: BrowserWrapper;
@@ -9,7 +10,7 @@ test.describe('My test suite', () => {
 
     test.beforeEach(async () => {
         browser = new BrowserWrapper();
-        page = await browser.getPage(configJson.uiUrl.websiteUrl)
+        page = await browser.getPage(urls.uiUrl.websiteUrl)
     });
 
     test.afterEach(async () => {
@@ -19,6 +20,6 @@ test.describe('My test suite', () => {
     test('check logged in ', async () => {
         const header = new Header(page)
         const receivedValue = await header.getLoggedinUserName();
-        expect(receivedValue).toBe(configJson.user);
+        expect(receivedValue).toBe(users.user);
     })
 });

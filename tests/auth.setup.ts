@@ -1,15 +1,17 @@
-import { expect, test as setup } from '@playwright/test';
-import configJson from "../config.json"
-import { makeLogin } from '../logic/api/api-request';
-import { Header } from '../logic/Browser/header';
+import { test as setup } from '@playwright/test';
+import { ApiCalls } from '../logic/api/api-request';
+import { setUserCredential } from '../logic/api/request-body/login-api-request';
+import users from "../configFiles/user-details.json"
+import auth from "../configFiles/config.json"
+import urls from "../configFiles/urls.json"
 
 setup('authenticate', async ({ browser, request }) => {
-    await makeLogin(request);
+    const apiCalls = new ApiCalls()
+    const data = setUserCredential(users.loginPage.userName, users.loginPage.password)
+    await apiCalls.makeLogin(data, request);
     const state = await request.storageState();
     const context = await browser.newContext({ storageState: state });
     const page = await context.newPage();
-    await page.goto(configJson.uiUrl.websiteUrl);
-    const header = new Header(page)
-    expect(await header.getLoggedinUserName()).toBe(configJson.user)
-    await page.context().storageState({ path: configJson.authFile });
+    await page.goto(urls.uiUrl.websiteUrl);
+    await page.context().storageState({ path: auth.authFile });
 });

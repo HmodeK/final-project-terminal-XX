@@ -1,7 +1,7 @@
 import { test, Page, expect } from '@playwright/test';
 import { BrowserWrapper } from "../infra/browser/browser-wrapper"; 
-import { Searching } from '../logic/Browser/searching';
-import configJson from "../config.json"
+import { Searching } from '../logic/Browser/product-search';
+import urls from "../configFiles/urls.json"
 
 test.describe('test for searching about products', ()=>{
     let browser: BrowserWrapper;
@@ -9,16 +9,17 @@ test.describe('test for searching about products', ()=>{
 
     test.beforeEach(async() =>{
         browser = new BrowserWrapper();
-        page = await browser.getPage(configJson.uiUrl.websiteUrl)
+        page = await browser.getPage(urls.uiUrl.websiteUrl)
     });
 
     test.afterEach(async () => {
         browser.closeBrowser()
     });
 
-    test('Perform search', async ()=>{
+    test('Perform search', async () => {
         const searching = new Searching(page);
         await searching.performSearch('תינוק');
-    //expect ?????????  
-      });
+        await page.mouse.move(-2000, -2000);
+        expect(await searching.searchContent()).toContain('תינוק')
+    });
 });

@@ -17,21 +17,15 @@ export class MyProfile extends BasePage {
     prfileIconClick = async () => {
         await this.profileIcon.click()
     }
-
     myInfoClick = async () => {
         await this.MyInfo.click()
     }
-
     myInfoContent = async () => {
         return await this.page.textContent('body');
-
 
     }
     myProfile = async () => {
         await this.prfileIconClick()
         await this.myInfoClick()
     }
-
-
-
 }
