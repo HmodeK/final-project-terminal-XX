@@ -2,7 +2,7 @@ import { BrowserWrapper } from "../infra/browser/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
 import configJson from "../config.json"
 import { WishListPage } from "../logic/Browser/wishlistPage";
-import { BrandPage } from "../logic/Browser/brandPage";
+import { BrandPage } from "../logic/Browser/BrandPage";
 
 test.describe('test for navigation via ui', () => {
     let browser: BrowserWrapper;

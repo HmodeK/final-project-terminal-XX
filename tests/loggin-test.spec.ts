@@ -19,6 +19,6 @@ test.describe('My test suite', () => {
     test('check logged in ', async () => {
         const header = new Header(page)
         const receivedValue = await header.getLoggedinUserName();
-        expect(receivedValue).toContain(configJson.user);
+        expect(receivedValue).toBe(configJson.user);
     })
 });
