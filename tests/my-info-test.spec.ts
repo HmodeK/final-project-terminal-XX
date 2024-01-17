@@ -1,7 +1,8 @@
 import { BrowserWrapper } from "../infra/browser/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
 import { MyProfile } from "../logic/Browser/MyProfile";
-import configJson from "../config.json"
+import users from "../configFiles/user-details.json"
+import urls from "../configFiles/urls.json"
 
 test.describe('test for userInfo', () => {
     let browser: BrowserWrapper;
@@ -16,10 +17,10 @@ test.describe('test for userInfo', () => {
     });
 
     test("check  if the user name is correct", async () => {
-        page = await browser.getPage(configJson.uiUrl.websiteUrl)
+        page = await browser.getPage(urls.uiUrl.websiteUrl)
         const myInfo = new MyProfile(page);
         await myInfo.myProfile()
-        expect(await myInfo.myInfoContent()).toContain(configJson.user)
+        expect(await myInfo.myInfoContent()).toContain(users.user)
 
     })
 })

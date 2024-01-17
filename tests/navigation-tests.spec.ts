@@ -1,8 +1,8 @@
 import { BrowserWrapper } from "../infra/browser/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
-import configJson from "../config.json"
-import { WishListPage } from "../logic/Browser/wishlistPage";
-import { BrandPage } from "../logic/Browser/BrandPage";
+import { WishListPage } from "../logic/Browser/wishlist-page";
+import { BrandPage } from "../logic/Browser/brand-Page";
+import urls from "../configFiles/urls.json"
 
 test.describe('test for navigation via ui', () => {
     let browser: BrowserWrapper;
@@ -10,7 +10,7 @@ test.describe('test for navigation via ui', () => {
 
     test.beforeEach(async () => {
         browser = new BrowserWrapper();
-        page = await browser.getPage(configJson.uiUrl.websiteUrl)
+        page = await browser.getPage(urls.uiUrl.websiteUrl)
     });
 
     test.afterEach(async () => {
@@ -21,7 +21,7 @@ test.describe('test for navigation via ui', () => {
         const wishList = new WishListPage(page);
         await wishList.heartIconClick()
         await page.waitForTimeout(5000);
-        expect(page.url()).toBe(configJson.expectedUrls.wishListUrl)
+        expect(page.url()).toBe(urls.expectedUrls.wishListUrl)
 
     })
 
@@ -29,7 +29,7 @@ test.describe('test for navigation via ui', () => {
         const brandName = new BrandPage(page)
         await brandName.brandClick()
         await page.waitForTimeout(2000);
-        expect(page.url()).toBe(configJson.expectedUrls.brandUrl)
+        expect(page.url()).toBe(urls.expectedUrls.brandUrl)
 
     })
 })
