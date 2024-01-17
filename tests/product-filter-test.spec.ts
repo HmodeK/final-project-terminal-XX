@@ -1,12 +1,10 @@
 import { BrowserWrapper } from "../infra/browser/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
 import { Header } from "../logic/browser/header";
-import { ProductPage } from "../logic/browser/product-sort";
 import { FilterProducts } from "../logic/browser/product-filter";
-import category from "../configFiles/category.json"
 import urls from "../configFiles/urls.json"
 
-test.describe('test sort and filter about products', () => {
+test.describe('test filter product', () => {
     let browser: BrowserWrapper;
     let page: Page;
 
@@ -21,15 +19,9 @@ test.describe('test sort and filter about products', () => {
         await browser.closeBrowser()
     });
 
-    test('Check if items is sorted by', async () => {
-        const selectOptionBy = new ProductPage(page)
-        await selectOptionBy.selectCategoryBy(category.category.showOptionyBy.sale)
-        expect(page.url()).toBe(urls.expectedUrls.sortUrl)
-    })
-
     test("check  if the products filterd", async () => {
         const selectOptionBy = new FilterProducts(page)
         await selectOptionBy.filterFlow()
-        expect(page.url()).toBe(urls.expectedUrls.filterUrl)
+        expect(await selectOptionBy.getProductTitle()).toContain('מכנסיים ארוכים')
     })
 })

@@ -1,9 +1,9 @@
 import { test as setup } from '@playwright/test';
-import { ApiCalls } from '../logic/Api/api-request'
+import { ApiCalls } from '../logic/api/api-request'
 import users from "../configFiles/user-details.json"
 import auth from "../configFiles/config.json"
 import urls from "../configFiles/urls.json"
-import { setUserCredential } from '../logic/Api/request-body/login-api-request';
+import { setUserCredential } from '../logic/api/request-body/login-api-request';
 
 setup('authenticate', async ({ browser, request }) => {
     const apiCalls = new ApiCalls()
