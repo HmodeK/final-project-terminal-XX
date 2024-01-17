@@ -18,7 +18,7 @@ test.describe('test sort and filter about products', () => {
     });
 
     test.afterEach(async () => {
-        browser.closeBrowser()
+        await browser.closeBrowser()
     });
 
     test('Check if items is sorted by', async () => {

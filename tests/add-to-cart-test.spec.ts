@@ -4,7 +4,7 @@ import { ApiCalls } from "../logic/Api/api-request";
 import { CartPage } from "../logic/Browser/cart-page";
 import details from "../configFiles/config.json"
 import urls from "../configFiles/urls.json"
-import { buildCartRequest } from "../logic/Api/request-body/addToCart-api-requests";
+import { buildCartRequest } from "../logic/Api/request-body/add-to-cart-api-requests";
 
 test.describe('Added item and validate if item is added vi api & ui', () => {
     let browser: BrowserWrapper;

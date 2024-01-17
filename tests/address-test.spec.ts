@@ -1,5 +1,5 @@
 import { test, Page, expect } from '@playwright/test'
-import { AccountAddress, buildAddressRequest } from '../logic/Api/request-body/address-api-request';
+import { buildAddressRequest } from '../logic/Api/request-body/address-api-request';
 import { AddressPage } from '../logic/Browser/address-page';
 import { BrowserWrapper } from "../infra/browser/browser-wrapper";
 import { addAddress } from '../logic/Api/address-Api';
@@ -19,11 +19,13 @@ test.describe('Add Address Test', () => {
         const deleteAddress = new DeleteAddress(page)
         await deleteAddress.checkIfAddressDeleted()
         await page.waitForTimeout(5000)
-        browser.closeBrowser()
+        await browser.closeBrowser()
     })
 
     test("Adding address", async ({ }) => {
-        const addressData: AccountAddress = buildAddressRequest(users.address.firstname, users.address.lastname, users.address.postcode, users.address.telephone, users.address.city, users.address.country_id, users.address.street);
+        const { firstname, lastname, postcode, telephone, city, country_id } = { ...users.address }
+        const { streetName, streetNumber, homeNumber } = { ...users.address.street }
+        const addressData = buildAddressRequest(firstname, lastname, postcode, telephone, city, country_id, { streetName, streetNumber, homeNumber })
 
         await addAddress(addressData);
 

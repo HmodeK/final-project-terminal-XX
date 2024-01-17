@@ -13,7 +13,7 @@ test.describe('test for searching about products', ()=>{
     });
 
     test.afterEach(async () => {
-        browser.closeBrowser()
+        await browser.closeBrowser()
     });
 
     test('Perform search', async () => {
