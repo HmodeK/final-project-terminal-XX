@@ -1,7 +1,9 @@
 {
     "apiUrl": {
         "loginUrl": "https://www.terminalx.com/pg/MutationUserLogin?v=I9dIkXxqUgEmvaClIy6g3%2FMlpMA%3D",
-        "addToCartUrl": "https://www.terminalx.com/pg/MutationAddAnyProductsToAnyCart?v=t4MeNg4Nhm8cTtfc8ZbCpP00Dzo%3D"
+        "addToCartUrl": "https://www.terminalx.com/pg/MutationAddAnyProductsToAnyCart?v=t4MeNg4Nhm8cTtfc8ZbCpP00Dzo%3D",
+        "addressUrl": "https://www.terminalx.com/pg/MutationCreateCustomerAddress?v=7M21Ktwz3hl5WT0GoUlh5nBYIc4%3"
+
     },
     "uiUrl": {
         "websiteUrl": "https://www.terminalx.com/",
