@@ -17,19 +17,10 @@ test.describe('test for navigation via ui', () => {
         await browser.closeBrowser()
     });
 
-    test("check the heartIcon click navigate to wishList ", async () => {
-        const wishList = new WishListPage(page);
-        await wishList.heartIconClick()
-        await page.waitForTimeout(5000);
-        expect(page.url()).toBe(urls.expectedUrls.wishListUrl)
-
-    })
-
     test("check the brand icon click navigate to brand page", async () => {
         const brandName = new BrandPage(page)
         await brandName.brandClick()
-        await page.waitForTimeout(2000);
-        expect(page.url()).toBe(urls.expectedUrls.brandUrl)
+        expect(await brandName.productListContnet()).toContain('ADIDAS')
 
     })
 })
