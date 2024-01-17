@@ -7,7 +7,7 @@ export class WishListPage extends BasePage {
   private heartIcon: Locator
   private wishList: Locator
   private PrductInfo: Locator
-  private removeButton : Locator
+  private removeButton: Locator
 
   constructor(page: Page) {
     super(page)
@@ -18,7 +18,6 @@ export class WishListPage extends BasePage {
     this.initPage()
 
   }
-
   heartIconClick = async () => {
     waitForElementToBeVisible(this.heartIcon, 3000)
     await this.heartIcon.click()
@@ -26,18 +25,13 @@ export class WishListPage extends BasePage {
 
   wishListClick = async () => {
     await this.wishList.click()
-   
+
   }
 
   addItemToWishList = async () => {
     return await this.PrductInfo.textContent()
   }
-removeItemFtomWishList =async () => {
-  await this.removeButton.click()
-
-  
-}
-
-
-
+  removeItemFtomWishList = async () => {
+    await this.removeButton.click()
+  }
 }
