@@ -20,12 +20,12 @@ export class Header extends BasePage {
     }
 
     hoverOnWomenLabel = async () => {
-        const wait = await waitForElementToBeVisible(this.loggedinUsername, 1000, 5)
+        await waitForElementToBeVisible(this.loggedinUsername, 1000, 5)
         await this.womenLabel.nth(2).hover()
     }
 
     clickOnWomenTypeOfItem = async () => {
-        const wait = await waitForElementToBeVisible(this.loggedinUsername, 3000, 5)
+        await waitForElementToBeVisible(this.loggedinUsername, 3000, 5)
         await this.womenTypeOfItem.click()
     }
 
@@ -34,12 +34,3 @@ export class Header extends BasePage {
         await this.clickOnWomenTypeOfItem()
     }
 }
-
-
-
-
-
-
-
-
-

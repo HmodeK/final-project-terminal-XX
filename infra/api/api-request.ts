@@ -1,5 +1,5 @@
 import { APIRequestContext, request } from "@playwright/test";
-import { ResponseWrapper } from "./response-wrapper";
+import { ResponseWrapper } from "../api/response-wrapper"
 
 const apiPostMethod = async <T>(url: string, data?: any, availableRequest?: APIRequestContext): Promise<ResponseWrapper<T>> => {
    const requestContext = availableRequest || (await request.newContext());

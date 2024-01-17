@@ -1,13 +1,12 @@
 import { apiPostMethod } from "../../infra/api/api-request"
 import { CartRequest } from "./request-body/addToCart-api-requests"
 import { UserCredential } from "./request-body/login-api-request"
-import { APIRequestContext, request } from "playwright"
+import { APIRequestContext } from "playwright"
 import urlsConfig from "../../configFiles/urls.json"
-import { AccountAddress } from "./request-body/add-address-apiRequest"
-
+import { AccountAddress } from "../Api/request-body/address-api-request"
 export class ApiCalls {
-
-
+  
+export class ApiCalls {
     makeLogin = async (data: UserCredential, request: APIRequestContext) => {
         return await apiPostMethod(urlsConfig.apiUrl.loginUrl, data, request)
     }
