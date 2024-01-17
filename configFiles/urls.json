@@ -7,7 +7,7 @@
     "uiUrl": {
         "websiteUrl": "https://www.terminalx.com/",
         "cartPageUrl": "https://www.terminalx.com/checkout/cart",
-        "productPageUrl":"https://www.terminalx.com/kids/teen/shirts/w215142015?color=9077"
+        "productPageUrl":"https://www.terminalx.com/kids/teen/shirts/w215142015?color=9077",
         "address":"https://www.terminalx.com/customer/address?limit=10"
     },
     "expectedUrls": {
