@@ -1,4 +1,3 @@
-<title> Final Project: Terminal XX Automated Testing </title>
 <body>
     <div>
         <h1>Final Project: Terminal XX Automated Testing</h1>
