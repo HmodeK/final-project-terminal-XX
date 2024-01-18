@@ -16,7 +16,7 @@ test.describe('test for searching about products', ()=>{
         await browser.closeBrowser()
     });
 
-    test('Perform search', async () => {
+    test('Perform search on specific product', async () => {
         const searching = new Searching(page);
         await searching.performSearch('תינוק');
         await page.mouse.move(-2000, -2000);

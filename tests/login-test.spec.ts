@@ -1,10 +1,10 @@
 import { BrowserWrapper } from "../infra/browser/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
-import { MyProfile } from "../logic/browser/my-profile";
+import { Header } from "../logic/browser/header";
 import users from "../configFiles/user-details.json"
 import urls from "../configFiles/urls.json"
 
-test.describe('test for userInfo', () => {
+test.describe('My test site', () => {
     let browser: BrowserWrapper;
     let page: Page;
 
@@ -17,9 +17,9 @@ test.describe('test for userInfo', () => {
         await browser.closeBrowser()
     });
 
-    test("check  if the user name is correct", async () => {
-        const myInfo = new MyProfile(page);
-        await myInfo.myProfile()
-        expect(await myInfo.myInfoContent()).toContain(users.user)
+    test('check user is logged in ', async () => {
+        const header = new Header(page)
+        const receivedValue = await header.getLoggedinUserName();
+        expect(receivedValue).toBe(users.user);
     })
-})
+});

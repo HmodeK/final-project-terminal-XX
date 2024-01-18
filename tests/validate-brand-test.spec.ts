@@ -1,10 +1,9 @@
 import { BrowserWrapper } from "../infra/browser/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
-import { Header } from "../logic/browser/header";
-import users from "../configFiles/user-details.json"
+import { BrandPage } from "../logic/browser/brand-Page";
 import urls from "../configFiles/urls.json"
 
-test.describe('My test suite', () => {
+test.describe('test navigation for brand page  via ui', () => {
     let browser: BrowserWrapper;
     let page: Page;
 
@@ -17,9 +16,10 @@ test.describe('My test suite', () => {
         await browser.closeBrowser()
     });
 
-    test('check logged in ', async () => {
-        const header = new Header(page)
-        const receivedValue = await header.getLoggedinUserName();
-        expect(receivedValue).toBe(users.user);
+    test("check the brand icon click navigate to brand products", async () => {
+        const brandName = new BrandPage(page)
+        await brandName.brandClick()
+        expect(await brandName.productListContnet()).toContain('ADIDAS')
+
     })
-});
+})

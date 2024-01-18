@@ -21,7 +21,7 @@ test.describe('Add Address Test', () => {
         await browser.closeBrowser()
     })
 
-    test("Adding address", async ({ }) => {
+    test("add  address to adresses via Api & validating if address is added via Ui", async ({ }) => {
         const { firstname, lastname, postcode, telephone, city, country_id } = { ...users.address1 }
         const { streetName, streetNumber, homeNumber } = { ...users.address1.street }
         const addressData = buildAddressRequest(firstname, lastname, postcode, telephone, city, country_id, { streetName, streetNumber, homeNumber })

@@ -3,7 +3,7 @@ import { test, Page, expect } from '@playwright/test';
 import { WishListPage } from "../logic/browser/wishlist-page";
 import urls from "../configFiles/urls.json"
 
-test.describe('test for  add to wishList navigation via ui', () => {
+test.describe('test for adding product to wishList via ui', () => {
     let browser: BrowserWrapper;
     let page: Page;
 
