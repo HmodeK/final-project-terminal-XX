@@ -1,6 +1,6 @@
 import { BasePage } from "../../infra/browser/base-page";
 import { Locator, Page } from "playwright";
-import { waitForElementToBeVisible, waitForTimeOut } from "../../infra/utils/wait-for-elements";
+import { waitForElementToBeVisible} from "../../infra/utils/wait-for-elements";
 
 export class WishListPage extends BasePage {
 

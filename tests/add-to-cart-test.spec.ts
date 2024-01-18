@@ -1,10 +1,10 @@
 import { BrowserWrapper } from "../infra/browser/browser-wrapper";
 import { test, Page, expect } from '@playwright/test';
-import { ApiCalls } from "../logic/Api/api-request";
-import { CartPage } from "../logic/Browser/cart-page";
+import { ApiCalls } from "../logic/api/api-request";
+import { CartPage } from "../logic/browser/cart-page";
 import details from "../configFiles/config.json"
 import urls from "../configFiles/urls.json"
-import { buildCartRequest } from "../logic/Api/request-body/add-to-cart-api-requests";
+import { buildCartRequest } from "../logic/api/request-body/add-to-cart-api-requests";
 
 test.describe('Added item and validate if item is added vi api & ui', () => {
     let browser: BrowserWrapper;
